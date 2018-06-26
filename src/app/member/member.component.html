@@ -1,0 +1,94 @@
+<nav class="fixed-top navbar-expand-lg navbar-expand-xl navbar">
+   <a class="navbar-brand mr-5" href="/LeaveManager"><i class="fa fa-leaf text-green"></i> Leave Manager</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggle" aria-controls="navbar-toggle" aria-label="Toggle navigation">
+   <span class="fa fa-bars"></span>
+   </button>
+   <div class="collapse navbar-collapse" style="display: inline-block;" id="navbar-toggle">
+      <ul class="navbar-nav">
+         <li class="nav-item">
+            <a class="nav-link" href="/LeaveManager/dashboard.php">
+            <i class="fa fa-cog"></i> Dashboard</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/LeaveManager/dashboard.php?tab=1">
+            <i class="fa fa-calendar"></i> Leaves</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/LeaveManager/dashboard.php?tab=4">
+            <i class="fa fa-user-secret"></i> My Account</a>
+         </li>
+         <li class="nav-item"><a class="nav-link" title="staff-one" href="#">
+            <i class="fa fa-user"></i> Staff-one</a>
+         </li>
+         <li class='nav-item'><a href='logout.php' class='nav-link'><i class='fa fa-sign-out'></i> Logout</a></li>
+      </ul>
+   </div>
+</nav>
+<div class="row mt-4">
+   <div class="col-md-3 navigation">
+      <h4 class="ml-3 hide-sm">
+         <i class="fa fa-paw mr-2"></i>
+         <span class="extra-sm">Staff-one</span>
+      </h4>
+      <ul class="main-nav">
+         <li class="list-main">
+            <a href="dashboard/myaccount">
+            <i class="fa fa-user-circle icon"></i>
+            <span class="extra-sm">My Account</span>
+            </a>
+         </li>
+         <li class="list-main">
+            <a href="dashboard/notification">
+            <i class="fa fa-bell icon"></i>
+            <span class="extra-sm">Leave Notifications</span>
+            </a>
+         </li>
+         <li class="list-main">
+            <a href="dashboard/jobdesc">
+            <i class="fa fa-edit icon"></i>
+            <span class="extra-sm">Job Description</span>
+            </a>
+         </li>
+
+          <li class="list-main">
+            <a href="dashboard/newleave">
+            <i class="fa fa-edit icon"></i>
+            <span class="extra-sm">New leave request</span>
+            </a>
+         </li>
+
+          <li class="list-main">
+            <a href="dashboard/archive">
+            <i class="fa fa-edit icon"></i>
+            <span class="extra-sm">Leave Archives</span>
+            </a>
+         </li>
+       
+
+      </ul>
+   </div>
+   <div class='col-md-8 ml-md-3'>
+      <div class='main-content'>
+         <div class="container mb-5 p-4">
+            <h1>Welcome, Normal Staff</h1>
+            <p>Here is where to manage your details as an employee.
+               With the tabs on the left-sidebar, you can view, edit and delete
+               your account without any difficulty.
+            </p>
+            <p>Also included are the ability to view your leave requests
+               such as recommended leaves, accepted leaves, rejected leaves, in
+               addition to being able to request for new leaves - all at the
+               comfort of your home or on the go.
+            </p>
+            <p>You can view your job description, generate reports of the
+               leave activities of a particular time/all time, view leave
+               statistics, pending leaves, and update your job description.
+            </p>
+            <h5>We hope you love your dashboard</h5>
+            <br><br><br>
+         </div>
+      </div>
+   </div>
+</div>
+<app-footer></app-footer>
+

@@ -1,0 +1,40 @@
+<div class="splash-img">
+    <div class="container login">
+    <h1 class="hide">Staff Login</h1>
+
+    <div class="row">
+  <div class="col-md-4 col-lg-4 col-xl-4 mx-auto">
+    <h3 class="text-center form-head">Staff Login</h3>
+
+            <div class="card login"> 
+     <form #regForm='ngForm' (ngSubmit)="Register(regForm)" > 
+  <p style="color:red" id="errorMsg"></p>
+       <input ngModel type="hidden" name="login-type" value="staff">
+    
+                <input ngModel type="hidden" name="table" value="employee">
+    
+                <input ngModel type="hidden" name="page" value="">
+                    
+                <label class="text-black" for="staff_user">Username</label><br>
+                <input ngModel type="text" name="username" maxlength="50" class="input-text" id="username"><br>
+                       
+                <label class="text-black" for="password">Password</label>
+                <br>
+                <input ngModel type="password" name="password" maxlength="50" class="input-text" id="password">
+ 
+                <button name="login" class="btn btn-yellow" type="submit">Login</button>
+                <br>
+                <small class='mr-2'>No account? <a href="" class='text-sm'>Register</a></small>
+                <small class='ml-2'>
+                    <a href="recover.php" class='text-sm'>Forgot Password?</a>
+                </small>
+     
+    </form>
+    </div>
+    </div>
+
+  </div>
+
+</div>
+
+</div>

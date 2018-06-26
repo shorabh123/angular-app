@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+<div class="container">  
+  <div class="row">  
+
+      <div class="form_bg">  
+          <form>  
+               <h2 class="text-center">Edit product</h2>  
+              <br/>  
+              <div class="form-group">  
+                  <input type="text" value="{{products[0].name}}" class="form-control" placeholder="product name" name="productName" ngModel >   
+              </div>  
+              <div class="form-group">  
+                  <input type="text" value="{{products[0].price}}" class="form-control"  placeholder="product price" name="productPrice" ngModel >  
+              </div>  
+              <div class="form-group">  
+                  <input type="text" value="{{products[0].description}}" class="form-control" id="email" placeholder="description" name="produtdesc" ngModel>  
+                    
+              </div>  
+              <div class="form-group">  
+                  <input type="text" value="{{products[0].category_id}}" class="form-control" id="email" placeholder="category id" name="catid" ngModel>  
+                    
+              </div> 
+               <div class="form-group">  
+                  <input type="text" value="{{products[0].category_name}}" class="form-control" id="email" placeholder="category name" name="catname" ngModel>  
+                    
+              </div>
+               <div class="form-group">  
+              </div>  
+              <br/>  
+              <div class="align-center">  
+                  <button type="submit" class="btn btn-default" id="register"  >Create</button>  
+              </div>  
+          </form>  
+      </div>  
+  </div>  
+</div> 

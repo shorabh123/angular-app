@@ -1,0 +1,118 @@
+<nav class="fixed-top navbar-expand-lg navbar-expand-xl navbar">
+   <a class="navbar-brand mr-5" href="/LeaveManager"><i class="fa fa-leaf text-green"></i> Leave Manager</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggle" aria-controls="navbar-toggle" aria-label="Toggle navigation">
+   <span class="fa fa-bars"></span>
+   </button>
+   <div class="collapse navbar-collapse" style="display: inline-block;" id="navbar-toggle">
+      <ul class="navbar-nav">
+         <li class="nav-item">
+            <a class="nav-link" href="/LeaveManager/dashboard.php">
+            <i class="fa fa-cog"></i> Dashboard</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/LeaveManager/dashboard.php?tab=1">
+            <i class="fa fa-calendar"></i> Leaves</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="/LeaveManager/dashboard.php?tab=4">
+            <i class="fa fa-user-secret"></i> My Account</a>
+         </li>
+         <li class="nav-item"><a class="nav-link" title="staff-one" href="#">
+            <i class="fa fa-user"></i> Staff-one</a>
+         </li>
+         <li class='nav-item'><a href='logout.php' class='nav-link'><i class='fa fa-sign-out'></i> Logout</a></li>
+      </ul>
+   </div>
+</nav>
+<div class="row mt-4">
+   <div class="col-md-3 navigation">
+      <h4 class="ml-3 hide-sm">
+         <i class="fa fa-paw mr-2"></i>
+         <span class="extra-sm">Staff-one</span>
+      </h4>
+       <ul class="main-nav">
+         <li class="list-main">
+            <a href="dashboard/myaccount">
+            <i class="fa fa-user-circle icon"></i>
+            <span class="extra-sm">My Account</span>
+            </a>
+         </li>
+         <li class="list-main">
+            <a href="dashboard/notification">
+            <i class="fa fa-bell icon"></i>
+            <span class="extra-sm">Leave Notifications</span>
+            </a>
+         </li>
+         <li class="list-main">
+            <a href="dashboard/jobdesc">
+            <i class="fa fa-edit icon"></i>
+            <span class="extra-sm">Job Description</span>
+            </a>
+         </li>
+
+          <li class="list-main">
+            <a href="dashboard/newleave">
+            <i class="fa fa-edit icon"></i>
+            <span class="extra-sm">New leave request</span>
+            </a>
+         </li>
+
+          <li class="list-main">
+            <a href="dashboard/archive">
+            <i class="fa fa-edit icon"></i>
+            <span class="extra-sm">Leave Archives</span>
+            </a>
+         </li>
+       
+
+      </ul>
+   </div>
+   <div class='col-md-8 ml-md-3'>
+     <div class="main-content">
+            <ul class="nav nav-tabs nav-fill" id="tab_content" role="tablist">
+
+                <li class="nav-item">
+                    <a class="nav-link active" id="rejected-tab" data-toggle="tab" href="#rejected" role="tab" aria-controls="rejected" aria-selected="true">
+                    <i class="fa fa-close"></i>
+                    <span class="extra-sm break">Rejected</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" id="accepted-tab" data-toggle="tab" href="#accepted" role="tab" aria-controls="accepted" aria-selected="false">
+                        <i class="fa fa-handshake-o"></i>
+                        <span class="extra-sm break">Accepted</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" id="no-action-tab" data-toggle="tab" href="#no-action" role="tab" aria-controls="no-action" aria-selected="false">
+                        <i class="fa fa-refresh"></i>
+                        <span class="extra-sm break">Pending</span>
+                    </a>
+                </li>
+            </ul><div class="tab-content" id="tab"><div class="tab-pane fade show active p-5" role="tabpanel" aria-labelledby="rejected-tab" id="rejected"><h2 class="text-center mb-5">No data available</h2></div><div class="tab-pane fade show p-5" role="tabpanel" aria-labelledby="accepted-tab" id="accepted"><h2 class="text-center mb-5">No data available</h2> </div><div class="tab-pane fade show p-5" role="tabpanel" aria-labelledby="no-action-tab" id="no-action">                <div class="card">
+                    <table class="table table-bordered table-responsive-sm w-100">
+                        <thead class="thead-dark">
+                            <tr><th>Leave ID</th>
+                            <th>Date Requested</th>
+                            <th>Leave Type</th>
+                        </tr></thead>
+
+                        <tbody><tr>
+                            <td>171521752477</td>
+
+                            <td>25-06-2018</td>
+
+                            <td>
+                                Annual
+                            </td>
+                        </tr>
+
+                    </tbody></table>
+                
+            </div></div></div></div>
+   </div>
+</div>
+<app-footer></app-footer>
+

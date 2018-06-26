@@ -1,0 +1,45 @@
+<div id="main">
+
+<div id="primary">
+  <div id="content" role="main">
+  
+  <div class="intro">{{intro}}</div>
+  
+  <!-- begin article -->
+  <article class="post hentry format-image" *ngFor="let post of posts">
+  	<header class="entry-header">
+		<h2 class="entry-title"><a href="/post-details/{{post.post_id}}">{{post.post_title}}</a></h2>
+		<div class="entry-meta">
+      		<div class="entry-format">
+        		<span class="image-format">image</span>
+        	</div>
+      		<span class="sep"> | </span>
+      		<a href="#"><time class="entry-date">{{post.post_date}}</time></a>
+      		<span class="sep"> | </span>	
+      		<span class="cat-links"> <a href="#">Photography</a></span>
+      		<span class="sep"> | </span>
+      		<div class="comments-link">
+	        	<a href="#">{{post.post_comment}} Comments</a>
+	        </div>
+     	</div>
+    	<!-- .entry-meta -->
+    </header>
+    <!-- .entry-header -->
+    
+    <div class="entry-content">
+      <div class="full-size">
+      </div>
+      <p>{{post.post_content}}</p>
+
+ 	</div>
+    <!-- .entry-content -->
+    
+  </article>
+  <!-- end article -->
+
+
+  </div>
+  </div>
+  </div>
+
+  

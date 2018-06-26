@@ -1,0 +1,72 @@
+<app-header></app-header>
+<div class="row m-b-18px">
+    <div class="col-md-12">
+        <!-- button to create new product -->
+        <a (click)="createProduct()" class='btn btn-primary pull-right'>
+            <span class='glyphicon glyphicon-plus'></span> Create Product
+        </a>
+    </div>
+</div>
+ 
+<div class="row">
+<script type="text/ng-template" id="categoryTree">
+    {{ category.title }}
+    <ul ng-if="category.categories">
+        <li ng-repeat="category in category.categories" ng-include="'categoryTree'">           
+        </li>
+    </ul>
+</script>
+    <div class="col-md-12">
+    <ul>
+  <ng-template #recursiveList let-list>
+    <li *ngFor="let item of list">
+      {{item.title}}
+      <ul *ngIf="item.children.length > 0">
+        <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children }"></ng-container>
+      </ul>
+    </li>
+  </ng-template>
+
+
+  <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: list }"></ng-container>
+
+
+</ul>
+ 
+        <!-- HTML table for our list of product records -->
+        <table class='blueTable table table-hover table-responsive table-bordered'>
+ 
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+ 
+            <!-- Use *ngFor directive to loop throught our list of products. -->
+            <tr *ngFor="let product of products">
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.category_name}}</td>
+                <td>
+                    <!-- read one product button -->
+                    <a  (click)="readOneProduct(product.id)" class='btn anchor btn-primary m-r-5px'>
+                        <span class='glyphicon glyphicon-eye-open'></span> Read
+                    </a>
+ 
+                    <!-- edit product button -->
+                    <a (click)="updateProduct(product.id)" class='btn anchor btn-info m-r-5px'>
+                        <span class='glyphicon glyphicon-edit'></span> Edit
+                    </a>
+ 
+                    <!-- delete product button -->
+                    <a  (click)="deleteProduct(product.id)" class='btn anchor btn-danger m-r-5px'>
+                        <span class='glyphicon glyphicon-remove'></span> Delete
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
